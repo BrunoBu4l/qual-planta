@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Perfil
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="cancel()">Cancel</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 3</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- <app-explore-container name="Tab 3 page"></app-explore-container> -->
+  <div class="div-conteudo">
+    <ion-button (click)="carregar()">Carregar</ion-button>
+    <h5>Nome Verdadeiro:</h5>
+    <div id="user-name"></div>
+    <h5>Nome de Usuário: {{displayName}}</h5>
+  </div>
+  <div *ngFor="let cad of dados"  style="border: solid 1px black;">
+    <h5>Nome Verdadeiro:</h5>
+    <p>{{cad.id}}</p>
+    <h5>Nome de Usuário:</h5>
+    <p>{{cad.user}}</p>
+  </div>
+</ion-content>
+

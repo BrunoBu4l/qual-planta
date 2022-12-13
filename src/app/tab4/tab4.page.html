@@ -1,0 +1,51 @@
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Cartão de plantas</ion-title>
+      <ion-buttons slot="start">
+        <ion-button (click)="cancel()">Cancel</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content [fullscreen]="true">
+    <!-- <app-explore-container name="Tab 3 page"></app-explore-container> -->
+    <div class="div-conteudo">
+      <ion-item>
+        <ion-label position="stacked">Pesquisar</ion-label>
+        <ion-input type="text" [(ngModel)]="nome" name="txNome" placeholder="Digite o nome da planta"></ion-input>
+      </ion-item>
+      <h5>Exemplos de nomes a ser procurado:</h5>
+      <p>poa+annua</p>
+      <p>Pereskia+aculeata</p>
+      <p>Mentha</p>
+      <p>{{url}}</p>
+
+      <h5>Dados Fixos</h5>
+      <ion-item *ngFor="let cards of dados">
+        <p>{{cards.nome}}</p>
+        <img src="{{ cards.img}}" style="height: 100px; width: 100px;"/>
+        <!-- <p>{{cards.img}}</p> -->
+        <!-- <p>{{cards.cientifico}}</p> -->
+      </ion-item>
+      <h5>Teste de retorno</h5>
+      <ng-container *ngIf="plants as plant">
+        <p>{{ plants.name.nameId }}</p>
+      </ng-container>
+      <ion-button (click)="procurarPlanta()">Carregar</ion-button>
+      <ion-content>
+        <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+          <ion-fab-button  (click)="takePicture()">
+            <ion-icon name="camera"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+
+        <ion-card *ngIf="photo">
+          <ion-card-content>
+            <img [src]="photo">
+          </ion-card-content>
+        </ion-card>
+        
+      </ion-content>
+    </div>
+   
+  </ion-content>
+ 

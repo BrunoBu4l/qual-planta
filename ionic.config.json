@@ -1,0 +1,7 @@
+{
+  "name": "qual-planta",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

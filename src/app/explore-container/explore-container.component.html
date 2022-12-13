@@ -1,0 +1,32 @@
+<h1><strong>{{ name }}</strong></h1>
+<div id="container">
+  <ion-list class="pond">
+    <ion-item>
+      <ion-label position="stacked">Insira seu nome: </ion-label>
+      <ion-input type="text" class="input" #nomeInput ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Insira seu Usuário: </ion-label>
+      <ion-input type="text" class="input" #userInput></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Senha: </ion-label>
+      <ion-input type="password" class="input" #passInput ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Confirma a senha:</ion-label>
+      <ion-input type="password" class="input" #passInput2></ion-input>
+    </ion-item>
+      <ion-button fill="clear" size="large" (click)="cadastrar(nomeInput.value, userInput.value, passInput.value, passInput2.value)">
+        <ion-icon name="arrow-forward-circle-outline" class="btnicon" slot="icon-only" ></ion-icon>
+      </ion-button>
+      <ion-button (click)="openTab()">clique</ion-button>
+  </ion-list>
+  <h2>{{title}}</h2>
+  <!-- <ul>
+    <li *ngFor="let item of nomes">
+      {{item.id}} - {{item.nome}} - {{item.user}} - {{item.senha}}
+    </li>
+  </ul> -->
+  
+</div>

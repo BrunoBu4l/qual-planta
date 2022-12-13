@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Menu
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 2</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <div class="div">
+      <div class="col-1">
+        <div class="square perfil">
+          <ion-button class="btn" (click)="entrar(1)">Perfil</ion-button>
+        </div>
+        <div class="square">
+          <h1>Contatos</h1>
+        </div>
+        <div class="square">
+          <h1>Chat</h1>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="square cardp">
+          <ion-button class="btn" (click)="entrar(2)">Cartão Planta</ion-button>
+        </div>
+        <div class="square">
+          <h1>Fórum</h1>
+        </div>
+        <div class="square">
+          <h1>Sair</h1>
+        </div>
+      </div>
+    </div>
+    
+    <!-- <div *ngFor="let cad of users.desc">
+      <p>{{cad.nomes}}</p>
+      <p>{{cad.usuario}}</p>
+      <p>{{cad.senha1}}</p>
+      <p>{{cad.senha2}}</p>
+    </div>  -->
+  </ion-content>
+</ion-content>

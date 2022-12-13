@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      QUAL É A PLANTA? - CADASTRO
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"  class="background-image">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large"></ion-title>
+    </ion-toolbar>
+  </ion-header>
+<div id="container">
+  <ion-content class="ion-padding">
+    <h2>Login</h2>
+    <ion-item>
+      <ion-label position="stacked">E-mail</ion-label>
+      <ion-input type="text" [(ngModel)]="email" name="txEmail" placeholder="Digite o nome da E-mail"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Senha</ion-label>
+      <ion-input type="password" [(ngModel)]="senha" name="txSenha" placeholder="Senha de 6 dígitos"></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="entrar()" expand="block">Entrar</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="registrar()" expand="block" color="secondary">Criar registro</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-content>
+</div>
+</ion-content>
+<ion-footer class="footer">
+  <h2>{{title}}</h2>
+</ion-footer>

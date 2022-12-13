@@ -1,0 +1,24 @@
+
+.background-image{
+    --background: url(../../../img/tela.png) 0 0/100% 100% no-repeat;
+    //border: solid 5px red;
+    text-align: center;
+}
+
+#container{
+  //border: 3px solid blue;
+  margin-top: 5em;
+  width: 90%;
+  height: 80%;
+  margin-left: 5%;
+  display: flex;
+  justify-items: center;
+}
+
+.footer{
+  text-align: center;
+}
+
+body{
+  padding-bottom: 95%;
+}
